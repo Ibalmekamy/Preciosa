@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Amor</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --primary-accent: #A62639;
+      --secondary-accent: #7D98B3;
+      --text-color: #F5F5F0;
+      --hover-color: #E8B059;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      transition: opacity 0.8s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    .divider {
+      width: 70%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--primary-accent), transparent);
+      margin: 0.8rem auto;
+      border-radius: 2px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .card, .image-box {
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: var(--primary-accent);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .image-box {
+      background-color: var(--secondary-accent);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      /* Removed max-height and overflow so full text shows */
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .khair-btn {
+      background-color: var(--primary-accent);
+      color: var(--text-color);
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      letter-spacing: 1px;
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .khair-btn:hover {
+      background-color: var(--hover-color);
+      color: var(--bg-color);
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      .card h2 { font-size: 1.1rem; }
+      .card p, .image-box { font-size: 0.85rem; }
+      .khair-btn { font-size: 0.95rem; padding: 0.7rem 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MI AMOR</h1>
+    <div class="divider"></div>
+  </header>
+
+  <div class="content">
+    <div class="card">
+      <h2>Para mi amada</h2>
+      <p>De nadie más que de un extraño vagabundo que solo intenta explicar lo que siente por ti.</p>
+    </div>
+    <div class="image-box">
+      <p>
+        I hate the way she talks to me until 3 AM making me forget that the rest of the world even exists. I hate her evil laugh on voice notes because it sounds so cute. I hate how she acts so naive and innocent when we both know she is the smartest person in the room and I hate that she thinks she can hide from me. I hate the way she laughs and makes fun of her own problems just to protect me from the weight because I hate that she thinks she has to be a hero all the time. I hate the way she ships me with others or pretends it is all a joke just because she is too scared to admit what is actually happening between us. I hate the way she calls me her favorite person because in that split second I actually feel like I am truly living and I hate how much power that gives her. I hate the way she says she misses me because it sounds so rare that it makes everything else feel like a lie. I hate that I do not want something that fades and I want the fire she carries even if it burns me. I hate that I cannot even find a way to actually hate her not even a little bit not even at all. But mostly I hate the way I do not want anyone else in this world except for her.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <button class="khair-btn" id="khairBtn">Khair</button>
+  </footer>
+
+  <script>
+    document.getElementById("khairBtn").addEventListener("click", function() {
+      document.body.style.opacity = "0";
+      setTimeout(function() {
+        window.location.href = "signup.html";
+      }, 800);
+    });
+  </script>
+</body>
+</html>

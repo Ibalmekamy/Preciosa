@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        #121212,   /* dark base */
+        #A62639,   /* red accent */
+        #7D98B3    /* blue accent */
+      );
+    }
+
+    /* Background gradient beneath video */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    /* Video outermost overlay */
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* show full portrait video */
+      background: #000;    /* fills empty sides */
+      z-index: 1;
+    }
+
+    /* Content beneath video */
+    .content {
+      position: relative;
+      z-index: 0;
+      color: #F5F5F0;
+      font-family: 'Georgia', serif;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+      .content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background gradient -->
+  <div class="background"></div>
+
+  <!-- Content beneath video -->
+  <div class="content">
+    <h1>Welcome</h1>
+    <p>The background blends with our palette.</p>
+  </div>
+
+  <!-- Video overlay -->
+  <video autoplay muted loop playsinline>
+    <source src="main.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
